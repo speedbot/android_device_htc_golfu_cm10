@@ -86,7 +86,6 @@ PRODUCT_COPY_FILES += \
     
 # Camera
 PRODUCT_COPY_FILES += \
-    vendor/htc/golfu/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so \
     vendor/htc/golfu/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
     vendor/htc/golfu/proprietary/lib/libmmipl.so:system/lib/libmmipl.so \
     vendor/htc/golfu/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
