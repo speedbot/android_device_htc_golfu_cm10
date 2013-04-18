@@ -1,0 +1,48 @@
+on early-init
+    start ueventd
+
+on init
+    export PATH /sbin
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+    export EXTERNAL_STORAGE /sdcard
+
+    symlink /system/etc /etc
+
+    mkdir /boot
+    mkdir /sdcard
+    mkdir /data
+    mkdir /sd-ext
+    mkdir /data/data
+    mkdir /datadata
+    mkdir /emmc
+    mkdir /system
+    mkdir /cache
+    mount /tmp /tmp tmpfs
+
+    symlink /emmc /internal_sdcard
+    chmod 0755 /sbin/busybox
+
+on boot
+
+    ifup lo
+    hostname localhost
+    domainname localdomain
+
+    class_start default
+
+service ueventd /sbin/ueventd
+    critical
+
+service recovery /sbin/recovery
+
+service adbd /sbin/adbd recovery
+    disabled
+
+on property:ro.debuggable=1
+    start adbd
+    write /sys/class/android_usb/android0/f_adb/on 1
+    setprop sys.usb.state adb
+    restart adbd
+    write /sys/devices/platform/android_usb/usb_function_switch 3
+    setprop sys.usb.state mass_storage,adb
