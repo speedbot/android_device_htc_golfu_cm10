@@ -141,6 +141,5 @@ SMALLER_FONT_FOOTPRINT := true
 # Power
 TARGET_PROVIDES_POWERHAL := true
 
-# inherit from the proprietary version
--include vendor/htc/golfu/BoardConfigVendor.mk
+
 
