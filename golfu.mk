@@ -176,8 +176,7 @@ PRODUCT_COPY_FILES += \
     device/htc/golfu/proprietary/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/htc/golfu/proprietary/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
     device/htc/golfu/proprietary/etc/AudioPara4.csv:system/etc/AudioPara4.csv \
-    device/htc/goflu/proprietary/etc/AudioPara4_WB.csv:system/etc/AudioPara4_WB.csv \
-    device/htc/golfu/proprietary/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
+     device/htc/golfu/proprietary/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
 
 # Sensors
 PRODUCT_COPY_FILES += \
