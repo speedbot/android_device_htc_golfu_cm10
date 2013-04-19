@@ -80,10 +80,10 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    device/htc/golfu/init.pico.rc:root/init.pico.rc \
+    device/htc/golfu/init.golfu.rc:root/init.golfu.rc \
     device/htc/golfu/ueventd.rc:root/ueventd.rc \
-    device/htc/golfu/init.pico.usb.rc:root/init.pico.usb.rc \
-    device/htc/golfu/ueventd.pico.rc:root/ueventd.golfu.rc
+    device/htc/golfu/init.usb.rc:root/init.golfu.usb.rc \
+    device/htc/golfu/ueventd.golfu.rc:root/ueventd.golfu.rc
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -98,8 +98,8 @@ PRODUCT_COPY_FILES += \
  device/htc/golfu/proprietary/bin/awb_camera:system/bin/awb_camera \
  device/htc/golfu/proprietary/bin/lsc_camera:system/bin/lsc_camera \
  device/htc/golfu/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
- device/htc/golfu/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
- device/htc/golfu/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
+ device/htc/golfu/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
+ device/htc/golfu/proprietary/etc/media_codecs.xml:system/etc/media_codecs.xml
  
 # OMX
 PRODUCT_COPY_FILES += \
@@ -176,8 +176,7 @@ PRODUCT_COPY_FILES += \
     device/htc/golfu/proprietary/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/htc/golfu/proprietary/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
     device/htc/golfu/proprietary/etc/AudioPara4.csv:system/etc/AudioPara4.csv \
-    device/htc/goflu/proprietary/etc/AudioPara4_WB.csv:system/etc/AudioPara4_WB.csv \
-    device/htc/golfu/proprietary/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
+     device/htc/golfu/proprietary/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -185,8 +184,8 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    device/htc/golfu/prebuilt/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
-    device/htc/golfu/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so
+    device/htc/golfu/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
+    device/htc/golfu/proprietary/lib/libqc-opt.so:system/lib/libqc-opt.so
 
 # 3D(Early JB Blobs)
 PRODUCT_COPY_FILES += \
@@ -358,15 +357,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=64m \
     dalvik.vm.heapgrowthlimit=32m
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/golfu/prebuilt/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
 
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
