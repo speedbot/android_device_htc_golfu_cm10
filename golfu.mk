@@ -80,10 +80,10 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    device/htc/golfu/init.pico.rc:root/init.pico.rc \
+    device/htc/golfu/init.golfu.rc:root/init.golfu.rc \
     device/htc/golfu/ueventd.rc:root/ueventd.rc \
-    device/htc/golfu/init.pico.usb.rc:root/init.pico.usb.rc \
-    device/htc/golfu/ueventd.pico.rc:root/ueventd.golfu.rc
+    device/htc/golfu/init.golfu.usb.rc:root/init.golfu.usb.rc \
+    device/htc/golfu/ueventd.golfu.rc:root/ueventd.golfu.rc
 
 # Camera
 PRODUCT_COPY_FILES += \
