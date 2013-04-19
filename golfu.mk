@@ -82,7 +82,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/golfu/init.golfu.rc:root/init.golfu.rc \
     device/htc/golfu/ueventd.rc:root/ueventd.rc \
-    device/htc/golfu/init.golfu.usb.rc:root/init.golfu.usb.rc \
+    device/htc/golfu/init.usb.rc:root/init.golfu.usb.rc \
     device/htc/golfu/ueventd.golfu.rc:root/ueventd.golfu.rc
 
 # Camera
