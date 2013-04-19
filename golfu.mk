@@ -359,15 +359,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=64m \
     dalvik.vm.heapgrowthlimit=32m
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/golfu/prebuilt/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 
