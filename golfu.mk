@@ -98,8 +98,8 @@ PRODUCT_COPY_FILES += \
  device/htc/golfu/proprietary/bin/awb_camera:system/bin/awb_camera \
  device/htc/golfu/proprietary/bin/lsc_camera:system/bin/lsc_camera \
  device/htc/golfu/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
- device/htc/golfu/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
- device/htc/golfu/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
+ device/htc/golfu/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
+ device/htc/golfu/proprietary/etc/media_codecs.xml:system/etc/media_codecs.xml
  
 # OMX
 PRODUCT_COPY_FILES += \
