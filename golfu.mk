@@ -185,8 +185,8 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    device/htc/golfu/prebuilt/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
-    device/htc/golfu/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so
+    device/htc/golfu/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
+    device/htc/golfu/proprietary/lib/libqc-opt.so:system/lib/libqc-opt.so
 
 # 3D(Early JB Blobs)
 PRODUCT_COPY_FILES += \
